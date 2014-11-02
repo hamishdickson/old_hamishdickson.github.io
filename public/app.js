@@ -10,7 +10,7 @@
 
         $routeProvider
             .when('/', {
-                templateUrl: 'views/home.html',
+                templateUrl: 'public/views/home.html',
                 controller: 'MainController'
             })
             .when('/timer', {
