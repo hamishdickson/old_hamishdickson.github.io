@@ -14,11 +14,11 @@
                 controller: 'MainController'
             })
             .when('/timer', {
-                templateUrl: '../views/timer.html',
+                templateUrl: 'views/timer.html',
                 controller: 'TimerController'
             })
             .when('/burnup', {
-                templateUrl: '../views/burnup.html',
+                templateUrl: 'views/burnup.html',
                 controller: 'BurnupController'
             })
             .otherwise({

@@ -4,6 +4,6 @@
 (function () {
     var app = angular.module('timer-controller', []);
 
-    app.controller('JobsController', function () {
+    app.controller('TimerController', function () {
     });
 })();
