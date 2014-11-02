@@ -2,7 +2,7 @@
  * Created by hamishdickson on 02/11/14.
  */
 (function () {
-    var app = angular.module('MyApp', ['ngCookies', 'ngResource', 'ngMessages', 'ngRoute', 'mgcrea.ngStrap',
+    var app = angular.module('MyApp', ['ngResource', 'ngMessages', 'ngRoute', 'mgcrea.ngStrap',
         'main-controller', 'timer-controller', 'burnup-controller']);
 
     app.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
