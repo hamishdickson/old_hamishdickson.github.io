@@ -1,1 +1,39 @@
-Hello World
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hamish Dickson</title>
+    <link href="public/stylesheets/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-static-top"
+     role="navigation" bs-navbar>
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+            Jobs3 webapp</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li data-match-route="/$"><a href="/">Home</a></li>
+        <li><a target="_blank" href="https://github.com/hamishdickson/hamishdickson.github.io">About</a></li>
+        <li><a href="mailto:hamish.dickson@jhc.co.uk?subject=github.io">Contact</a></li>
+    </ul>
+</div>
+
+<p>Hello World!</p>
+
+<div ng-view></div>
+
+
+<script src="public/vendor/angular.js"></script>
+<script src="public/vendor/angular-strap.js"></script>
+<script src="public/vendor/angular-strap.tpl.js"></script>
+<script src="public/vendor/angular-messages.js"></script>
+<script src="public/vendor/angular-resource.js"></script>
+<script src="public/vendor/angular-route.js"></script>
+
+</body>
+</html>
