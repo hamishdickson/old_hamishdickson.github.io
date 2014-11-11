@@ -13,14 +13,6 @@
                 templateUrl: 'public/views/home.html',
                 controller: 'MainController'
             })
-            .when('/timer', {
-                templateUrl: 'public/views/timer.html',
-                controller: 'TimerController'
-            })
-            .when('/burnup', {
-                templateUrl: 'public/views/burnup.html',
-                controller: 'BurnupController'
-            })
             .otherwise({
                 redirectTo: '/'
             });
