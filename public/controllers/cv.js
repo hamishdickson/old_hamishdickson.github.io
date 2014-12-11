@@ -2,8 +2,8 @@
  * Created by hamishdickson on 02/11/14.
  */
 (function () {
-    var app = angular.module('timer-controller', []);
+    var app = angular.module('cv-controller', []);
 
-    app.controller('TimerController', function () {
+    app.controller('CvController', function () {
     });
 })();

@@ -13,6 +13,10 @@
                 templateUrl: 'public/views/home.html',
                 controller: 'MainController'
             })
+            .when('/cv', {
+                templateUrl: 'public/views/cv.html',
+                controller: 'CvController'
+            })
             .otherwise({
                 redirectTo: '/'
             });
