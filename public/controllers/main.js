@@ -72,7 +72,7 @@
             this.setNextStep();
 
             $(function () {
-                $('#comet').animate({left: '+=' + delta_x + "px", top: '+=' + delta_y + "px"}, 10, 'linear');
+                $('#comet').animate({left: '+=' + delta_x + "px", top: '+=' + delta_y + "px"}, 1000, 'linear');
             });
         }
     });
