@@ -18,13 +18,10 @@
         var STARTING_POINT_X = 0,
             STARTING_POINT_Y = 0;
 
-        var STARTING_VELOCITY_X = 0,
-            STARTING_VELOCITY_Y = 0;
+        var STARTING_VELOCITY_X = 10,
+            STARTING_VELOCITY_Y = 10;
 
         var G = 1;
-
-        var INITIAL_VELOCITY_X = 100,
-            INITIAL_VELOCITY_Y = 100;
 
         var TIME_STEP = 10; // miniseconds
 
@@ -42,10 +39,22 @@
 
             delta_x = u_x * TIME_STEP;
             delta_y = u_y * TIME_STEP;
+
+            x += delta_x;
+            y += delta_y;
         };
 
-        $(function () {
-            $('#comet').animate({left: '+=' + delta_x + "px", top: '+=' + delta_y + "px"}, 1000, 'linear');
-        });
+        for (count = 0; count < 10; count++) {
+
+            if (x > 1500 || y > 1500) {
+                break;
+            }
+
+            this.setNextStep();
+
+            $(function () {
+                $('#comet').animate({left: '+=' + delta_x + "px", top: '+=' + delta_y + "px"}, 1000, 'linear');
+            });
+        }
     });
 })();
