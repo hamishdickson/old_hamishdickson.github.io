@@ -31,8 +31,8 @@
         var u_x = STARTING_VELOCITY_X,
             u_y = STARTING_VELOCITY_Y;
 
-        var delta_x = 100,
-            delta_y = 100;
+        var delta_x = 1,
+            delta_y = 1;
 
         this.setNextStep = function() {
             // s = ut + 0.5at^2
@@ -42,18 +42,37 @@
 
             x += delta_x;
             y += delta_y;
+
+            console.log("x: " + x);
+            console.log("y: " + y);
         };
 
-        for (count = 0; count < 10; count++) {
+        this.xAcceleration = function() {
 
-            if (x > 1500 || y > 1500) {
-                break;
+        };
+
+        for (count = 0; count < 100; count++) {
+
+            if (x > 1350) {
+                x = 0;
+
+                $(function(){
+                    $('#comet').css('left', '0');
+                });
+            }
+
+            if (y > 500) {
+                y = 0;
+
+                $(function() {
+                    $('#comet').css('top', '0');
+                });
             }
 
             this.setNextStep();
 
             $(function () {
-                $('#comet').animate({left: '+=' + delta_x + "px", top: '+=' + delta_y + "px"}, 1000, 'linear');
+                $('#comet').animate({left: '+=' + delta_x + "px", top: '+=' + delta_y + "px"}, 10, 'linear');
             });
         }
     });
