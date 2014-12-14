@@ -234,6 +234,7 @@ ul {
   list-style-type: none;
 }
 
+/*
 #sun {
   position: absolute;
   left: 200px;
@@ -276,4 +277,14 @@ ul {
   border-radius: 50%;
   background-color: grey;
   border: 2px solid dimgrey;
+}*/
+
+svg {
+  height: 500px;
+  width: 1000px;
+}
+
+svg#sun {
+  position: absolute;
+  left: 100px;
 }
