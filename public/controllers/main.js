@@ -6,7 +6,7 @@
 
     app.controller('MainController', function () {
 
-        // todo when happy remove the jQuery files etc
+        // todo when happy remove the jQuery files et
 /*
         var SUN_X = 200,
             SUN_Y = 200;
