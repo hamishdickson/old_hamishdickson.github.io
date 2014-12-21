@@ -3,7 +3,7 @@
  */
 (function () {
     var app = angular.module('MyApp', ['ngResource', 'ngMessages', 'ngRoute', 'mgcrea.ngStrap',
-        'main-controller', 'cv-controller']);
+        'main-controller']);
 
     app.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
         $locationProvider.html5Mode(true);
@@ -12,10 +12,6 @@
             .when('/', {
                 templateUrl: 'public/views/home.html',
                 controller: 'MainController'
-            })
-            .when('/cv', {
-                templateUrl: 'public/views/cv.html',
-                controller: 'CvController'
             })
             .otherwise({
                 redirectTo: '/'
