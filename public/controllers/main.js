@@ -134,25 +134,40 @@
 
 
         var s = Snap('#svg');
+        var sun = Snap('#sun');
+        var earth = Snap('#earth');
+        var mars = Snap('#mars');
+        var comet = Snap('#comet');
+
         var smallCircle = s.circle(150, 100, 20);
 
         smallCircle.attr({
-            fill: "#bada55",
-            stroke: "#000",
+            fill: "grey",
+            stroke: "dimgrey",
             strokeWidth: 5
         });
 
-        snow();
+        var sunCircle = sun.circle(200, 200, 30);
+        
+        sunCircle.attr({
+            fill: "yellow",
+            stroke: "orange",
+            strokeWidth: 4
+        });
 
-        function snow(){
-            animateFlake(smallCircle); // Send it to be infinitely animated
+
+
+        falling();
+
+        function falling(){
+            animateBall(smallCircle); // Send it to be infinitely animated
         }
 
-        function animateFlake(flake){
-            flake.attr({ transform: 't0 -200'}); // Reset the flake's position to behind the cloud
+        function animateBall(ball){
+            ball.attr({ transform: 't0 -200'}); // Reset the ball's position to behind the cloud
             var timing = getRandomArbitrary(1000, 10000); // Random transition time between times we specify
             // Animate the flake and do a new animation for it when it's done (repeat this function)
-            flake.stop().animate({ transform: 't250 500 '}, timing, function(){ animateFlake(flake);});
+            ball.stop().animate({ transform: 't250 500 '}, timing, function(){ animateBall(ball);});
         }
 
         function getRandomArbitrary(min, max) {
