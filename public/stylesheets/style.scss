@@ -280,6 +280,7 @@ ul {
 }*/
 
 svg {
+  position: absolute;
   height: 500px;
   width: 1000px;
 }
@@ -287,4 +288,14 @@ svg {
 svg#sun {
   position: absolute;
   left: 100px;
+}
+
+svg#earth {
+  position: absolute;
+  left: 200px;
+}
+
+svg#mars {
+  position: absolute;
+  left: 300px;
 }

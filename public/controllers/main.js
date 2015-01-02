@@ -132,35 +132,47 @@
             }, 2500,mina.easeinout);
         });*/
 
-
-        var s = Snap('#svg');
         var sun = Snap('#sun');
         var earth = Snap('#earth');
         var mars = Snap('#mars');
         var comet = Snap('#comet');
 
-        var smallCircle = s.circle(150, 100, 20);
+        var cometCircle = comet.circle(150, 100, 20);
 
-        smallCircle.attr({
+        cometCircle.attr({
             fill: "grey",
             stroke: "dimgrey",
             strokeWidth: 5
         });
 
         var sunCircle = sun.circle(200, 200, 30);
-        
+
         sunCircle.attr({
             fill: "yellow",
             stroke: "orange",
             strokeWidth: 4
         });
 
+        var earthCircle = earth.circle(200, 200, 30);
 
+        earthCircle.attr({
+            fill: "green",
+            stroke: "blue",
+            strokeWidth: 2
+        });
+
+        var marsCircle = mars.circle(200, 200, 30);
+
+        marsCircle.attr({
+            fill: "#A80000",
+            stroke: "#600000",
+            strokeWidth: 2
+        });
 
         falling();
 
         function falling(){
-            animateBall(smallCircle); // Send it to be infinitely animated
+            animateBall(cometCircle); // Send it to be infinitely animated
         }
 
         function animateBall(ball){
