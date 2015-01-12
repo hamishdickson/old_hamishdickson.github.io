@@ -137,7 +137,7 @@
         var mars = Snap('#mars');
         var comet = Snap('#comet');
 
-        var cometCircle = comet.circle(150, 100, 20);
+        var cometCircle = comet.circle(150, 100, 10);
 
         cometCircle.attr({
             fill: "grey",
@@ -145,7 +145,7 @@
             strokeWidth: 5
         });
 
-        var sunCircle = sun.circle(200, 200, 30);
+        var sunCircle = sun.circle(200, 200, 70);
 
         sunCircle.attr({
             fill: "yellow",
@@ -161,7 +161,7 @@
             strokeWidth: 2
         });
 
-        var marsCircle = mars.circle(200, 200, 30);
+        var marsCircle = mars.circle(200, 200, 20);
 
         marsCircle.attr({
             fill: "#A80000",
