@@ -34,16 +34,11 @@
 
             for (var initPositionWidth = 0; initPositionWidth < WIDTH; initPositionWidth++) {
                 var next = Math.floor(Math.random() * SEED_SIZE);
-
-                if (next > SEED_SIZE - 2) {
-                    row[initPositionWidth] = true;
-                } else {
-                    row[initPositionWidth] = false;
-                }
+                row[initPositionWidth] = next > SEED_SIZE - 2;
             }
 
             return row;
-        };
+        }
 
 
         $scope.getCellCssClass = function(x, y) {
@@ -87,7 +82,7 @@
         };
 
         function emptyRow() {
-            emptyRowArray = [];
+            var emptyRowArray = [];
             for (var emptyX = 0; emptyX < WIDTH; emptyX++) {
                 emptyRowArray[emptyX] = false;
             }
