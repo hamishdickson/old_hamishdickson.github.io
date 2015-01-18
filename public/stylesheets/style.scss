@@ -279,6 +279,7 @@ ul {
   border: 2px solid dimgrey;
 }*/
 
+/*
 svg {
   position: absolute;
   height: 500px;
@@ -300,4 +301,10 @@ svg#mars {
   position: absolute;
   left: 700px;
   top: 400px;
+}*/
+
+div.alive {
+  height: 20px;
+  width: 20px;
+  background-color: #0000ff;
 }

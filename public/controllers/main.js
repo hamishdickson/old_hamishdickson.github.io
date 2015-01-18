@@ -131,7 +131,7 @@
             }, 2500,mina.easeinout);
         });*/
 
-        var sun = Snap('#sun');
+/*        var sun = Snap('#sun');
         var earth = Snap('#earth');
         var mars = Snap('#mars');
         var comet = Snap('#comet');
@@ -183,7 +183,7 @@
 
         function getRandomArbitrary(min, max) {
             return Math.random() * (max - min) + min;
-        }
+        }*/
 
         // ----------------- game of life --------------------
 
