@@ -246,6 +246,11 @@ ul {
 }
 
 .hamish {
+  border: 1px solid #778899;
+}
+
+.hamish:hover {
+  @extend .hamish;
   @extend .alive;
-  background-color: red;
+  background-color: #4682B4;
 }

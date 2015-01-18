@@ -5,7 +5,7 @@
 
             <table>
             <tr ng-repeat="row in grid track by $index">
-                <td ng-repeat="cell in row track by $index"><div class="{{getCellCssClass($parent.$index, $index)}}"></div></td>
+                <td ng-repeat="cell in row track by $index"><div class="{{getCellCssClass($parent.$index, $index)}} {{getHamishClass($parent.$index, $index)}}"></div></td>
             </tr>
             </table>
 
