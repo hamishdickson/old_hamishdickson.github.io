@@ -15,20 +15,9 @@
         var keepGoing = true;
 
         $scope.ALIVE_CLASS = 'alive';
-        $scope.HAMISH_CLASS = 'hamish';
         $scope.DEAD_CLASS = 'dead';
 
         var INITIAL_GRID = init();
-
-        $scope.resetGrid = function() {
-            keepGoing = false;
-
-            INITIAL_GRID = init();
-
-            $scope.grid = INITIAL_GRID;
-
-            keepGoing = true;
-        };
 
         function init() {
             var localGrid = [];
@@ -109,13 +98,13 @@
             return (x >= 0 && y >= 0 && x <= WIDTH - 1 && y <= HEIGHT - 1);
         };
 
+        // new idea - the edges should reflect the cell next to it ... that way it runs a little longer
         var isCellAlive = function(x, y, i, j) {
             if (isCellOnGrid(x, y)) {
                 return $scope.grid[y][x];
             } else {
                 return $scope.grid[j][i];
             }
-            //return isCellOnGrid(x, y) && $scope.grid[y][x];
         };
 
         var countNeighbours = function(x, y) {

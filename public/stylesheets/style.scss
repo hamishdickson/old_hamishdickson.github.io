@@ -245,10 +245,6 @@ ul {
   background-color: #0000ff;
 }
 
-.hamish {
-  border: 1px solid #778899;
-}
-
 .hamish:hover {
   @extend .hamish;
   @extend .alive;
