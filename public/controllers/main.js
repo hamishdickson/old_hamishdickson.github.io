@@ -12,11 +12,23 @@
         var WIDTH = 70;
         var INTERVAL_TIME = 500;
 
+        var keepGoing = true;
+
         $scope.ALIVE_CLASS = 'alive';
         $scope.HAMISH_CLASS = 'hamish';
         $scope.DEAD_CLASS = 'dead';
 
         var INITIAL_GRID = init();
+
+        $scope.resetGrid = function() {
+            keepGoing = false;
+
+            INITIAL_GRID = init();
+
+            $scope.grid = INITIAL_GRID;
+
+            keepGoing = true;
+        };
 
         function init() {
             var localGrid = [];
@@ -77,7 +89,11 @@
 
             $scope.grid = newGrid;
 
-            $timeout(function() { $scope.iterate(); }, INTERVAL_TIME);
+            if (keepGoing) {
+                $timeout(function () {
+                    $scope.iterate();
+                }, INTERVAL_TIME);
+            }
         };
 
         var emptyGrid = function() {

@@ -2,7 +2,7 @@
     <div>
         <div class="body" ng-controller="MainController">
             <button class="btn btn-default" ng-click="iterate()">Start game of life</button>
-
+            
             <table>
             <tr ng-repeat="row in grid track by $index">
                 <td ng-repeat="cell in row track by $index"><div class="{{getCellCssClass($parent.$index, $index)}} {{getHamishClass($parent.$index, $index)}}"></div></td>
