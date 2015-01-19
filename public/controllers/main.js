@@ -52,17 +52,6 @@
             return row;
         }
 
-        $scope.getHamishClass = function(x, y) {
-            if ((x == 11 && (y == 12 || y == 15 || y == 18 || y == 19 || y == 22 || y == 23 || y == 25 || y == 26 || y == 28 || y == 31 || y == 32 || y == 34 || y == 37 ))
-                || (x == 12 && (y == 12 || y == 15 || y == 17 || y == 20 || y == 22 || y == 24 || y == 26 || y == 28 || y == 30 || y == 34 || y == 37))
-                || (x == 13 && (y == 12 || y == 13 || y == 14 || y == 15 || y == 17 || y == 20 || y == 22 || y == 26 || y == 28 || y == 31 || y == 34 || y == 35 || y == 36 || y == 37))
-                || (x == 14 && (y == 12 || y == 15 || y == 17 || y == 18 || y == 19 || y == 20 || y == 22 || y == 26 || y == 28 || y == 32 || y == 34 || y == 37))
-                || (x == 15 && (y == 12 || y == 15 || y == 17 || y == 20 || y == 22 || y == 26 || y == 28 || y == 30 || y == 31 || y == 34 || y == 37))) {
-                return $scope.HAMISH_CLASS;
-            }
-        };
-
-
         $scope.getCellCssClass = function(x, y) {
             if ($scope.grid[x][y] == true) {
                 return $scope.ALIVE_CLASS;
@@ -120,8 +109,13 @@
             return (x >= 0 && y >= 0 && x <= WIDTH - 1 && y <= HEIGHT - 1);
         };
 
-        var isCellAlive = function(x, y) {
-            return isCellOnGrid(x, y) && $scope.grid[y][x];
+        var isCellAlive = function(x, y, i, j) {
+            if (isCellOnGrid(x, y)) {
+                return $scope.grid[y][x];
+            } else {
+                return $scope.grid[j][i];
+            }
+            //return isCellOnGrid(x, y) && $scope.grid[y][x];
         };
 
         var countNeighbours = function(x, y) {
@@ -138,35 +132,35 @@
         };
 
         var isBottomRightCellAlive = function(x, y) {
-            return isCellAlive(x + 1, y + 1);
+            return isCellAlive(x + 1, y + 1, x, y);
         };
 
         var isBottomCellAlive = function(x, y) {
-            return isCellAlive(x, y + 1);
+            return isCellAlive(x, y + 1, x, y);
         };
 
         var isBottomLeftCellAlive = function (x, y) {
-            return isCellAlive(x - 1, y + 1);
+            return isCellAlive(x - 1, y + 1, x, y);
         };
 
         var isRightCellAlive = function(x, y) {
-            return isCellAlive(x + 1, y);
+            return isCellAlive(x + 1, y, x, y);
         };
 
         var isLeftCellAlive = function(x, y) {
-            return isCellAlive(x - 1, y);
+            return isCellAlive(x - 1, y, x, y);
         };
 
         var isTopRightCellAlive = function(x, y) {
-            return isCellAlive(x + 1, y - 1);
+            return isCellAlive(x + 1, y - 1, x, y);
         };
 
         var isTopCellAlive = function(x, y) {
-            return isCellAlive(x, y - 1);
+            return isCellAlive(x, y - 1, x, y);
         };
 
         var isTopLeftCellAlive = function(x, y) {
-            return isCellAlive(x-1, y-1);
+            return isCellAlive(x-1, y-1, x, y);
         };
 
     }]);
