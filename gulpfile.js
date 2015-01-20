@@ -19,10 +19,7 @@ gulp.task('compress', function() {
         'public/vendor/angular.js',
         'public/vendor/*.js',
         'public/app.js',
-        'public/services/*.js',
-        'public/controllers/*.js',
-        'public/filters/*.js',
-        'public/directives/*.js'
+        'public/controllers/*.js'
     ])
         .pipe(concat('app.min.js'))
         .pipe(uglify())
