@@ -11,8 +11,7 @@
         var HEIGHT = 35;
         var WIDTH = 70;
         var INTERVAL_TIME = 500;
-
-        var keepGoing = true;
+        var SEED_SIZE = 7;
 
         $scope.ALIVE_CLASS = 'alive';
         $scope.DEAD_CLASS = 'dead';
@@ -31,11 +30,8 @@
         function initRow() {
             var row = [];
 
-            var SEED_SIZE = 7;
-
             for (var initPositionWidth = 0; initPositionWidth < WIDTH; initPositionWidth++) {
-                var next = Math.floor(Math.random() * SEED_SIZE);
-                row[initPositionWidth] = next > SEED_SIZE - 2;
+                row[initPositionWidth] = randomBoolean();
             }
 
             return row;
@@ -67,11 +63,10 @@
 
             $scope.grid = newGrid;
 
-            if (keepGoing) {
-                $timeout(function () {
-                    $scope.iterate();
-                }, INTERVAL_TIME);
-            }
+            $timeout(function () {
+                $scope.iterate();
+            }, INTERVAL_TIME);
+
         };
 
         var emptyGrid = function() {
@@ -98,12 +93,16 @@
             return (x >= 0 && y >= 0 && x <= WIDTH - 1 && y <= HEIGHT - 1);
         };
 
-        // new idea - the edges should reflect the cell next to it ... that way it runs a little longer
-        var isCellAlive = function(x, y, i, j) {
+        function randomBoolean() {
+            return Math.floor(Math.random() * SEED_SIZE) > SEED_SIZE - 2;
+        }
+
+        // new new idea - if it's not on the grid, then try a random boolean
+        var isCellAlive = function(x, y) {
             if (isCellOnGrid(x, y)) {
                 return $scope.grid[y][x];
             } else {
-                return $scope.grid[j][i];
+                return randomBoolean();
             }
         };
 
@@ -121,35 +120,35 @@
         };
 
         var isBottomRightCellAlive = function(x, y) {
-            return isCellAlive(x + 1, y + 1, x, y);
+            return isCellAlive(x + 1, y + 1);
         };
 
         var isBottomCellAlive = function(x, y) {
-            return isCellAlive(x, y + 1, x, y);
+            return isCellAlive(x, y + 1);
         };
 
         var isBottomLeftCellAlive = function (x, y) {
-            return isCellAlive(x - 1, y + 1, x, y);
+            return isCellAlive(x - 1, y + 1);
         };
 
         var isRightCellAlive = function(x, y) {
-            return isCellAlive(x + 1, y, x, y);
+            return isCellAlive(x + 1, y);
         };
 
         var isLeftCellAlive = function(x, y) {
-            return isCellAlive(x - 1, y, x, y);
+            return isCellAlive(x - 1, y);
         };
 
         var isTopRightCellAlive = function(x, y) {
-            return isCellAlive(x + 1, y - 1, x, y);
+            return isCellAlive(x + 1, y - 1);
         };
 
         var isTopCellAlive = function(x, y) {
-            return isCellAlive(x, y - 1, x, y);
+            return isCellAlive(x, y - 1);
         };
 
         var isTopLeftCellAlive = function(x, y) {
-            return isCellAlive(x-1, y-1, x, y);
+            return isCellAlive(x-1, y-1);
         };
 
     }]);
