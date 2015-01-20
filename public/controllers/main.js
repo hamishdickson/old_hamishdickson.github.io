@@ -8,8 +8,8 @@
 
     app.controller('MainController', [ '$scope', '$timeout', function ($scope, $timeout) {
 
-        var HEIGHT = 35;
-        var WIDTH = 70;
+        var HEIGHT = Math.floor(window.innerHeight / 20) - 4;
+        var WIDTH = Math.floor(window.innerWidth / 20);
         var INTERVAL_TIME = 500;
         var SEED_SIZE = 7;
 
