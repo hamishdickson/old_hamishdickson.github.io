@@ -11,7 +11,7 @@
         var HEIGHT = Math.floor(window.innerHeight / 20) - 4;
         var WIDTH = Math.floor(window.innerWidth / 20);
         var INTERVAL_TIME = 500;
-        var SEED_SIZE = 7;
+        var SEED_SIZE = 4;
 
         $scope.ALIVE_CLASS = 'alive';
         $scope.DEAD_CLASS = 'dead';
