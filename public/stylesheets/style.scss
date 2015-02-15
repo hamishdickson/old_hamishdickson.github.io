@@ -31,9 +31,12 @@ $cell-alive: $footer-background;
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
   background-color: $footer-background;
   padding-top: 25px;
   height: 70px;
+  width: 100%;
 }
 
 ul {
@@ -50,4 +53,22 @@ ul {
   left: 15%;
   background-color: #ffffff;
   width: 70%;
+}
+
+.background {
+  position: absolute;
+  top: 60px;
+}
+
+// we don't need so much on a small screen
+@media (max-width: 600px) {
+  .footer-text {
+    text-align: right;
+  }
+
+  #main-panel {
+    @extend #main-panel;
+    left: 0%;
+    width: 100%;
+  }
 }
