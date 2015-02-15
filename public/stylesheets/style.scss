@@ -43,3 +43,11 @@ ul {
 .nav > li:hover {
   background-color: $menu-selected;
 }
+
+#main-panel {
+  position: absolute;
+  top: 60px;
+  left: 15%;
+  background-color: #ffffff;
+  width: 70%;
+}

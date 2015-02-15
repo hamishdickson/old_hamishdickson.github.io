@@ -13,6 +13,18 @@
                 templateUrl: 'public/views/home.html',
                 controller: 'MainController'
             })
+            .when('/about', {
+                templateUrl: 'public/views/about.html',
+                controller: 'MainController'
+            })
+            .when('/cv', {
+                templateUrl: 'public/views/cv.html',
+                controller: 'MainController'
+            })
+            .when('/projects', {
+                templateUrl: 'public/views/projects.html',
+                controller: 'MainController'
+            })
             .otherwise({
                 redirectTo: '/'
             });
