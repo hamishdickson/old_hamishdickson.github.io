@@ -3,11 +3,10 @@
 $icon-font-path: '../fonts/';
 $font-family-base: 'Open Sans', sans-serif;
 
-/*$body-bg: #e4e7ec;
-$headings-color: #111;
-*/
 $headings-font-family: Avenir, sans-serif;
 $headings-font-weight: bold;
+
+$menu-selected: #e7e7e7;
 
 $text-muted: #90939a;
 
@@ -39,4 +38,8 @@ footer {
 
 ul {
   list-style-type: none;
+}
+
+.nav > li:hover {
+  background-color: $menu-selected;
 }
