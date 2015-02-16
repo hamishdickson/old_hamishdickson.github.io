@@ -72,3 +72,20 @@ ul {
     width: 100%;
   }
 }
+
+.meeeee {
+  text-align: center;
+}
+
+a {
+  border-bottom: 1px solid #428bca;
+}
+
+a:hover, a.navbar-brand:hover {
+  text-decoration: none;
+  border-bottom: 2px solid #428bca;
+}
+
+li > a, a.navbar-brand {
+  border-bottom: none;
+}

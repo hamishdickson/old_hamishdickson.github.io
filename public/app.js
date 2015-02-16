@@ -28,6 +28,5 @@
             .otherwise({
                 redirectTo: '/'
             });
-
     }]);
 })();
