@@ -60,16 +60,25 @@ ul {
   top: 60px;
 }
 
+.footer-text {
+  text-align: right;
+}
+
 // we don't need so much on a small screen
 @media (max-width: 600px) {
-  .footer-text {
-    text-align: right;
+  .footer-text, .footer-links {
+    text-align: center;
   }
 
   #main-panel {
     @extend #main-panel;
     left: 0%;
     width: 100%;
+  }
+
+  footer {
+    @extend footer;
+    height: 100px;
   }
 }
 
