@@ -8,6 +8,10 @@
 
     app.controller('MainController', [ '$scope', '$timeout', function ($scope, $timeout) {
 
+        /**
+         * Game of life
+         */
+
         var HEIGHT = Math.floor(window.innerHeight / 20) - 4;
         var WIDTH = Math.floor(window.innerWidth / 20);
         var INTERVAL_TIME = 500;
