@@ -16,6 +16,7 @@
 
                 $http.jsonp(instagramApiUrl)
                     .success(function(response) {
+                        console.log(JSON.stringify(response));
                         $scope.pics.push(response.data);
                     })
                     .error(function() {
