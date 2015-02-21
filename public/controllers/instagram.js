@@ -12,12 +12,11 @@
             controller: function () {
                 var instagramApiUrl = "https://api.instagram.com/v1/users/self/feed?client_id=1e35c120cf174b948e06c09bb6f5422a&callback=callbackFunction";
 
-                $scope.pics = [];
+                var pics = [];
 
                 $http.jsonp(instagramApiUrl)
                     .success(function(response) {
-                        console.log(JSON.stringify(response));
-                        $scope.pics.push(response.data);
+                        pics.push(response.data);
                     })
                     .error(function() {
                         console.log("hmm")
