@@ -19,7 +19,7 @@
                         pics.push(response.data);
                     })
                     .error(function() {
-                        console.log("hmm")
+                        console.log("hmm dat no worky")
                     });
             },
             controllerAs: "instagram"
