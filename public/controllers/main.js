@@ -24,10 +24,14 @@
 
         function init() {
             var localGrid = [];
-            for (var initPositionHeight = 0; initPositionHeight < HEIGHT; initPositionHeight++) {
-                localGrid[initPositionHeight] = initRow();
-            }
 
+            // ok so on small devices, don't run gol - it's not really needed
+            if (window.innerWidth > 400) {
+                for (var initPositionHeight = 0; initPositionHeight < HEIGHT; initPositionHeight++) {
+                    localGrid[initPositionHeight] = initRow();
+                }
+
+            }
             return localGrid;
         }
 
