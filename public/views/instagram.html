@@ -1,0 +1,7 @@
+<div class="panel col-md-6">
+    <h2>instagram feed</h2>
+
+    <div ng-repeat="pic in pics">
+        <img ng-src="{{pic.images.low_resolution.url}}" class="img-responsive thumbnail" title="{{pic.caption.text}}">
+    </div>
+</div>
