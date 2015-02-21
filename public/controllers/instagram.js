@@ -10,11 +10,11 @@
             restrict: 'E',
             templateUrl: 'public/views/instagram.html',
             controller: function () {
-                var instagramApiUrl = "https://api.instagram.com/v1/users/self/feed?client_id=1e35c120cf174b948e06c09bb6f5422a";
+                var instagramApiUrl = "https://api.instagram.com/v1/users/self/feed?client_id=1e35c120cf174b948e06c09bb6f5422a&callback=callbackFunction";
 
                 $scope.pics = [];
 
-                $http.get(instagramApiUrl)
+                $http.jsonp(instagramApiUrl)
                     .success(function(response) {
                         $scope.pics.push(response.data);
                     })
