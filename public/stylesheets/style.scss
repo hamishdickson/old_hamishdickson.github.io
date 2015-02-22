@@ -65,7 +65,7 @@ ul {
 }
 
 // we don't need so much on a small screen
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   .footer-text, .footer-links {
     text-align: center;
   }
@@ -92,13 +92,25 @@ a {
 
 a:hover, a.navbar-brand:hover {
   text-decoration: none;
-  border-bottom: 2px solid #428bca;
+  border-bottom: 4px solid #428bca;
+
+  .find-me-icon {
+    color: #428bca;
+  }
 }
 
 li > a, a.navbar-brand {
   border-bottom: none;
 }
 
-body {
-  /*font-size: 18px;*/
+li > .find-me-icon:hover {
+  color: $footer-background;
+}
+
+.navbar-right:last-child {
+  padding-right: 3em;
+}
+
+.navbar-collapse > ul > li > a {
+  font-size: 18px;
 }
