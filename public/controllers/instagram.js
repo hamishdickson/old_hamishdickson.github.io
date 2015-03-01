@@ -19,11 +19,15 @@
 
                 $http.jsonp(instagramApiUrl)
                     .success(function(response) {
-                        pics.push(response.data);
+                        /*pics.push(response.data);*/
                     })
                     .error(function() {
                         console.log("hmm dat no worky")
                     });
+
+                function callbackFunction(res){
+                    pics.push(res.data);
+                }
             },
             controllerAs: "instagram"
         };
