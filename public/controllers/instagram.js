@@ -19,7 +19,7 @@
 
                 $http.jsonp(instagramApiUrl)
                     .success(function(response) {
-                        pics.push(response.data);
+                        pics.push(JSON.parse(response.data));
                     })
                     .error(function() {
                         console.log("hmm dat no worky")
