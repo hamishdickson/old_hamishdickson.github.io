@@ -64,6 +64,11 @@ ul {
   text-align: right;
 }
 
+.brief {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 // we don't need so much on a small screen
 @media (max-width: 750px) {
   .footer-text, .footer-links {
