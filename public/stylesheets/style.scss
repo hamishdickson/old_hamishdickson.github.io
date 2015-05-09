@@ -12,6 +12,9 @@ $text-muted: #90939a;
 
 $footer-background: #245369;
 $cell-alive: $footer-background;
+$cell-border: #93BACC;
+
+$link-color: #428bca;
 
 @import 'bootstrap/bootstrap';
 
@@ -24,6 +27,7 @@ $cell-alive: $footer-background;
 .alive {
   @extend .dead;
   background-color: $cell-alive;
+  border: solid 5px $cell-border;
 }
 
 .footer-text {
@@ -92,15 +96,15 @@ ul {
 }
 
 a {
-  border-bottom: 1px solid #428bca;
+  border-bottom: 1px solid $link-color;
 }
 
 a:hover, a.navbar-brand:hover {
   text-decoration: none;
-  border-bottom: 4px solid #428bca;
+  border-bottom: 4px solid $link-color;
 
   .find-me-icon {
-    color: #428bca;
+    color: $link-color;
   }
 }
 
@@ -115,8 +119,3 @@ li > .find-me-icon:hover {
 .navbar-right:last-child {
   padding-right: 3em;
 }
-/*
-
-.navbar-collapse > ul > li > a {
-  font-size: 18px;
-}*/
