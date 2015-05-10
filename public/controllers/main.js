@@ -14,11 +14,11 @@
 
         var HEIGHT = Math.floor(window.innerHeight / 20) - 4;
         var WIDTH = Math.floor(window.innerWidth / 20);
-        var INTERVAL_TIME = 500;
+        var INTERVAL_TIME = 3000;
         var SEED_SIZE = 4;
 
         $scope.ALIVE_CLASS = 'alive';
-        $scope.DEAD_CLASS = 'dead';
+        $scope.DEAD_CLASS = 'cell';
 
         var INITIAL_GRID = init();
 

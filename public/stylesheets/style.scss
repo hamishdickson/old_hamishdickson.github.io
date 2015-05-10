@@ -27,7 +27,14 @@ $link-color: #428bca;
 .alive {
   @extend .dead;
   background-color: $cell-alive;
-  border: solid 5px $cell-border;
+  border: solid 4px $cell-border;
+  animation: fadein 1s;
+  -webkit-animation: fadein 1s;
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .footer-text {
@@ -118,4 +125,9 @@ li > .find-me-icon:hover {
 
 .navbar-right:last-child {
   padding-right: 3em;
+}
+
+.home-page {
+  animation: fadein 1s;
+  -webkit-animation: fadein 1s;
 }
