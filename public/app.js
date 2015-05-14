@@ -37,6 +37,14 @@
                 templateUrl: 'public/views/projects.html',
                 controller: 'MainController'
             })
+            .when('/blog', {
+                templateUrl: 'public/views/blog.html',
+                controller: 'MainController'
+            })
+            .when('/#blog', {
+                templateUrl: 'public/views/blog.html',
+                controller: 'MainController'
+            })
             .otherwise({
                 redirectTo: '/'
             });
