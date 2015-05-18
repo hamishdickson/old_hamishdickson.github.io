@@ -7,6 +7,7 @@ $headings-font-family: Avenir, sans-serif;
 $headings-font-weight: bold;
 
 $menu-selected: #e7e7e7;
+$menu-unselected: #f8f8f8;
 
 $text-muted: #90939a;
 
@@ -116,6 +117,10 @@ a:hover, a.navbar-brand:hover {
 }
 
 li > a, a.navbar-brand {
+  border-bottom: 4px solid $menu-unselected;
+}
+
+.navbar-header > a:hover {
   border-bottom: none;
 }
 
