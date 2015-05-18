@@ -120,6 +120,10 @@ li > a, a.navbar-brand {
   border-bottom: 4px solid $menu-unselected;
 }
 
+.navbar {
+  padding-top: 4px solid $menu-unselected;
+}
+
 .navbar-header > a:hover {
   border-bottom: none;
 }
