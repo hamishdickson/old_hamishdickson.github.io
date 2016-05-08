@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Hamish Dickson - technical blog
+title: Hamish Dickson - still being nerdy
 email: hamish.dickson@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Blog concentrating on functional programming, maths and physics.
