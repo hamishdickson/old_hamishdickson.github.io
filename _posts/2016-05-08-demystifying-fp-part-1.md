@@ -1,4 +1,10 @@
-# Demystifying Functional Programming
+---
+layout: post
+title:  "Demystifying Functional Programming"
+date:   2016-05-08 15:44:26 +0100
+categories: functional programming
+---
+
 
 ## Part 1 - ehy?
 
@@ -20,13 +26,13 @@ Cool. Wait... what the hell does that actually mean?
 
 ### Mutable state bad
 
-Consider this bit of code:
+Consider this equation:
 
 ```
 x = x + 1
 ```
 
-Now, you've probably written something like that 100 times in the last year alone, but have you ever thought about it from a mathematical point of view? Well, let's do it now
+Now, you've probably written a bit of code like that 100 times in the last year alone, but have you ever thought about it from a mathematical point of view? Well, let's do it now
 
 ```
     x = x + 1
@@ -61,44 +67,44 @@ Functional programming is also about avoiding side effects. Typical side effects
 - reading/writing to disk
 - well... actually most of what you think of as IO!
             
- You might be wondering "if I can't write out the results of my program to the console, then that's not a very interesting program is it?". Which is fair, the original strict FP languages were very impractical and didn't do much more than heat up your computer's processor. I want to cover this in another blog post so won't talk about this again here, but rest assured that this problem is now solved (spoiler: yay, monads!)
+You might be wondering "if I can't write out the results of my program to the console, then that's not a very interesting program is it?". Which is fair, the original strict FP languages were very impractical and didn't do much more than heat up your computer's processor. I want to cover this in another blog post so won't talk about this again here, but rest assured that this problem is now solved (spoiler: yay, monads!)
             
- The reason you want to do this is something called referential transparency. If you use (call) a mathematical function, you should be able to replace that call with the function itself and get the same result.
+The reason you want to do this is something called referential transparency. If you use (call) a mathematical function, you should be able to replace that call with the function itself and get the same result.
             
- For example:
+For example:
             
- ```tut
-scala>  def funnyAdderUpper(x: Int, y: Int): Int = (x + y) - (2 * y)
+```scala
+scala> def funnyAdderUpper(x: Int, y: Int): Int = (x + y) - (2 * y)
 funnyAdderUpper: (x: Int, y: Int)Int
 
-scala>  val result = 8 * funnyAdderUpper(3, 4)
+scala> val result = 8 * funnyAdderUpper(3, 4)
 result: Int = -8
- ```
+```
             
- which by substitution is exactly the same as
+which by substitution is exactly the same as
             
- ```tut
-scala>  val result = 8 * ((3 + 4) - (2 * 4))
+```scala
+scala> val result = 8 * ((3 + 4) - (2 * 4))
 result: Int = -8
- ```
+```
             
- ie
-            
- ```tut
-scala>  val result = -8
+ie
+ 
+```scala
+scala> val result = -8
 result: Int = -8
- ```
+```
             
- Fair enough. What if `funnyAdderUpper` had a side effect?
+Fair enough. What if `funnyAdderUpper` had a side effect?
             
- ```tut
-scala>  var m: Int = 0
+```scala
+scala> var m: Int = 0
 m: Int = 0
 
-scala>  def badAdder(x: Int, y: Int): Int = {
-     |      val z = (x + y) - (2 * y) + m
-     |      m = x
-     |      z
+scala> def badAdder(x: Int, y: Int): Int = {
+     |   val z = (x + y) - (2 * y) + m
+     |   m = x
+     |   z
      | }
 badAdder: (x: Int, y: Int)Int
 
