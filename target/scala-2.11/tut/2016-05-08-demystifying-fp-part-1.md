@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Demystifying Functional Programming"
+title:  "Demystifying Functional Programming: part 1 - ehy?"
 date:   2016-05-08 15:44:26 +0100
 categories: functional programming
 ---

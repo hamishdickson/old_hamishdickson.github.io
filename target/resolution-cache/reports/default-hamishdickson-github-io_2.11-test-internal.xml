@@ -7,15 +7,15 @@
 		revision="1.0"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, ensime-internal"
-		date="20160508150916"/>
+		date="20160508170626"/>
 	<dependencies>
 		<module organisation="org.tpolecat" name="tut-core_2.11">
-			<revision name="0.4.2" status="release" pubdate="20160224061209" resolver="tpolecat" artresolver="tpolecat" homepage="" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+			<revision name="0.4.2" status="release" pubdate="20160224061209" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
 				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="successful" details="" size="1625" time="185" location="/Users/hamishdickson/.ivy2/cache/org.tpolecat/tut-core_2.11/ivy-0.4.2.xml" searched="true" original-local-location="/Users/hamishdickson/.ivy2/cache/org.tpolecat/tut-core_2.11/ivy-0.4.2.xml.original" origin-is-local="false" origin-location="http://dl.bintray.com/tpolecat/maven/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.pom"/>
+				<metadata-artifact status="no" details="" size="2900" time="0" location="/Users/hamishdickson/.ivy2/cache/org.tpolecat/tut-core_2.11/ivy-0.4.2.xml" searched="false" origin-is-local="false" origin-location="http://dl.bintray.com/tpolecat/maven/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.pom"/>
 				<caller organisation="default" name="hamishdickson-github-io_2.11" conf="test, compile, provided, test-internal, runtime, optional" rev="0.4.2" rev-constraint-default="0.4.2" rev-constraint-dynamic="0.4.2" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="tut-core_2.11" type="jar" ext="jar" status="successful" details="" size="207479" time="945" location="/Users/hamishdickson/.ivy2/cache/org.tpolecat/tut-core_2.11/jars/tut-core_2.11-0.4.2.jar">
+					<artifact name="tut-core_2.11" type="jar" ext="jar" status="no" details="" size="207479" time="0" location="/Users/hamishdickson/.ivy2/cache/org.tpolecat/tut-core_2.11/jars/tut-core_2.11-0.4.2.jar">
 						<origin-location is-local="false" location="http://dl.bintray.com/tpolecat/maven/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.jar"/>
 					</artifact>
 				</artifacts>

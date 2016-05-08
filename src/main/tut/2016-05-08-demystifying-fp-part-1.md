@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Demystifying Functional Programming"
+title:  "Demystifying Functional Programming: part 1 - ehy?"
 date:   2016-05-08 15:44:26 +0100
 categories: functional programming
 ---
 
 
-## Part 1 - ehy?
+# ehy?
 
 OK, so you've heard about this thing called Functional Programming. All you really know about it is it involves a beard, having strong opinions about coffee and waving your arms about a lot while saying "monad!". What's it all about? What does it offer me that my current way of programming doesn't?
 

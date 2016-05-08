@@ -17,3 +17,7 @@ github_username:  hamishdickson
 
 # Build settings
 markdown: kramdown
+
+exclude:
+  - src/
+  - target/

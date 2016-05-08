@@ -32,31 +32,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#hamishdickson-github-io_2.11;1.0->org.tpolecat#tut-core_2.11;0.4.2 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.tpolecat#tut-core_2.11;0.4.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.tpolecat#tut-core_2.11;0.4.2 {test=[default(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving org.tpolecat#tut-core_2.11;0.4.2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.tpolecat#tut-core_2.11;0.4.2 {test=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/hamishdickson/.ivy2/local/org.tpolecat/tut-core_2.11/0.4.2/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.tpolecat#tut-core_2.11;0.4.2[0m
-[0m[[0mdebug[0m] [0m		tried https://jcenter.bintray.com/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.pom[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://jcenter.bintray.com/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.pom[0m
-[0m[[0mdebug[0m] [0m	jcenter: no ivy file found for org.tpolecat#tut-core_2.11;0.4.2[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.pom[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.pom[0m
-[0m[[0mdebug[0m] [0m	public: no ivy file found for org.tpolecat#tut-core_2.11;0.4.2[0m
-[0m[[0mdebug[0m] [0m		tried http://dl.bintray.com/tpolecat/maven/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.pom[0m
-[0m[[0mdebug[0m] [0m	tpolecat: found md file for org.tpolecat#tut-core_2.11;0.4.2[0m
-[0m[[0mdebug[0m] [0m		=> http://dl.bintray.com/tpolecat/maven/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.pom (0.4.2)[0m
-[0m[[0mdebug[0m] [0mdownloading http://dl.bintray.com/tpolecat/maven/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.pom ...[0m
-[0m[[0mdebug[0m] [0m	tpolecat: downloading http://dl.bintray.com/tpolecat/maven/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.pom[0m
-[0m[[0mdebug[0m] [0m	tpolecat: downloading http://dl.bintray.com/tpolecat/maven/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://dl.bintray.com/tpolecat/maven/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.tpolecat#tut-core_2.11;0.4.2!tut-core_2.11.pom(pom.original) (185ms)[0m
-[0m[[0mdebug[0m] [0m		tried /Users/hamishdickson/.ivy2/local/org.tpolecat/tut-core_2.11/0.4.2/jars/tut-core_2.11.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://jcenter.bintray.com/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://jcenter.bintray.com/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://dl.bintray.com/tpolecat/maven/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.jar[0m
-[0m[[0mdebug[0m] [0m	found org.tpolecat#tut-core_2.11;0.4.2 in tpolecat[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.tpolecat#tut-core_2.11;0.4.2[0m
+[0m[[0mdebug[0m] [0m	found org.tpolecat#tut-core_2.11;0.4.2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#hamishdickson-github-io_2.11;1.0->org.tpolecat#tut-core_2.11;0.4.2 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#hamishdickson-github-io_2.11;1.0->org.tpolecat#tut-core_2.11;0.4.2 [test->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.tpolecat#tut-core_2.11;0.4.2->org.scala-lang#scala-compiler;2.11.7 [compile->master(compile)][0m
@@ -310,12 +287,7 @@
 [0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.11.7!scala-library.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://dl.bintray.com/tpolecat/maven/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://dl.bintray.com/tpolecat/maven/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.jar ...[0m
-[0m[[0mdebug[0m] [0m	tpolecat: downloading http://dl.bintray.com/tpolecat/maven/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.jar[0m
-[0m[[0mdebug[0m] [0m	tpolecat: downloading http://dl.bintray.com/tpolecat/maven/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://dl.bintray.com/tpolecat/maven/org/tpolecat/tut-core_2.11/0.4.2/tut-core_2.11-0.4.2.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.tpolecat#tut-core_2.11;0.4.2!tut-core_2.11.jar (945ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.tpolecat#tut-core_2.11;0.4.2!tut-core_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.7!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.1!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.7!scala-reflect.jar[0m
@@ -323,7 +295,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scalap;2.11.7!scalap.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3470ms :: artifacts dl 955ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 75ms :: artifacts dl 9ms[0m
 [0m[[0mdebug[0m] [0m	report for default#hamishdickson-github-io_2.11;1.0 compile produced in /Users/hamishdickson/Programming/hamishdickson.github.io/target/resolution-cache/reports/default-hamishdickson-github-io_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#hamishdickson-github-io_2.11;1.0 runtime produced in /Users/hamishdickson/Programming/hamishdickson.github.io/target/resolution-cache/reports/default-hamishdickson-github-io_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#hamishdickson-github-io_2.11;1.0 test produced in /Users/hamishdickson/Programming/hamishdickson.github.io/target/resolution-cache/reports/default-hamishdickson-github-io_2.11-test.xml[0m
@@ -338,5 +310,5 @@
 [0m[[0mdebug[0m] [0m	report for default#hamishdickson-github-io_2.11;1.0 pom produced in /Users/hamishdickson/Programming/hamishdickson.github.io/target/resolution-cache/reports/default-hamishdickson-github-io_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#hamishdickson-github-io_2.11;1.0 scala-tool produced in /Users/hamishdickson/Programming/hamishdickson.github.io/target/resolution-cache/reports/default-hamishdickson-github-io_2.11-scala-tool.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#hamishdickson-github-io_2.11;1.0 ensime-internal produced in /Users/hamishdickson/Programming/hamishdickson.github.io/target/resolution-cache/reports/default-hamishdickson-github-io_2.11-ensime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (3470ms resolve - 955ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (75ms resolve - 9ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
