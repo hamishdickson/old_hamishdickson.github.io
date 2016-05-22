@@ -1,1 +1,8 @@
 tut
+TRUE.asInstanceOf[Serializable]
+java.lang.Boolean.TRUE.asInstanceOf[Serializable]
+import java.lang.Boolean.TRUE
+1 + 1
+console
+tut
+~tut

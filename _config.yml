@@ -6,14 +6,14 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Hamish Dickson - nerd stuff
+title: Hamish Dickson - nerdy stuff
 email: hamish.dickson@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Functional programming, maths and physics are my jam
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "hamishdickson.github.com"
 twitter_username: _mishy
-github_username:  hamishdickson
+github_username: hamishdickson
 
 # Build settings
 markdown: kramdown
