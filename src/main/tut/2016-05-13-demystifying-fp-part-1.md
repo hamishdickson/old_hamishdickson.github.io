@@ -172,7 +172,7 @@ In functional programming, we often call methods like this _impure_ or _side eff
 
 You might be thinking "woah there, IO? If I can't read in data or write out the results of my program, then that's not a very interesting program is it?". Which is fair, the original strict FP languages were very impractical and didn't do much more than "heat up your computer's processor". I want to cover this in another blog post so won't talk about this again here, but rest assured there are mathematically consistent ways to deal with this (spoiler: yay, monads!).
 
-Because of referential transparency, you should be able to inline every part of your code and end up with the same program (er.... conceptually... don't actually do it probably won't be very nice to read)
+Because of referential transparency, you should be able to inline every part of your code and end up with the same program (er.... conceptually... don't actually do it as it probably won't be very nice to read)
 
 #### Exceptions
 
