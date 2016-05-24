@@ -6,7 +6,7 @@ categories: functional programming
 ---
 
 
-## Tools of the trade (part a)
+## To map a Mockingbird
 
 In my [last post](http://hamishdickson.github.io/functional/programming/2016/05/13/demystifying-fp-part-1.html) I gave a very hand wavy, rough outline of what we mean by functional programming. This post is going to be much more hands on - if you have Scala installed, then feel free to follow along using Scala's REPL - this post has been compiled using [something very cool called tut](https://github.com/tpolecat/tut) so all the code snippets should just work out the box.
 
