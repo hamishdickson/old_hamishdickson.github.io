@@ -144,7 +144,7 @@ What's even cooler is since we know all the possibilities for `Foo` we can exhau
 scala> def fooer(a: Foo): String = a match {
      |     case Bar(b) => b + "by"
      | }
-<console>:14: warning: match may not be exhaustive.
+<console>:15: warning: match may not be exhaustive.
 It would fail on the following input: Baz(_, _)
        def fooer(a: Foo): String = a match {
                                    ^

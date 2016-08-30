@@ -14,13 +14,15 @@ Ad-hoc polymorphism
 Imagine we have some function `sort`, which takes a list of type A and sorts it for us
 
 ```tut
-def sort[A](ls: List[A]): List[A]
+def sort[A](ls: List[A]): List[A] = ???
 ```
 
 There is something missing from this. How do we actually sort `A`? We need some way to compare two `A`s and decide which one is greater. Doing this in general isn't easy since we compare `Int`s differently to `Strings` (for example). We need to pass that information into our sort function. Let's do that with something we will call 'Ord' (after `Ord` in Haskell)
 
 ```tut
-def sort[A](ls: List[A])(ord: Ord[A]): List[A]
+trait Ord[A]
+
+def sort[A](ls: List[A])(ord: Ord[A]): List[A] = ???
 ```
 
 ## Equality
@@ -55,9 +57,9 @@ trait Eq[A] {
 
 
 ```tut
-def elem[A](x: A, ys: A)(implicit eq: Eq[A]): Boolean = ys match {
+def elem[A](x: A, ys: List[A])(implicit eq: Eq[A]): Boolean = ys match {
     case Nil => false
-    case y :: ys => Eq.eq(x, y) || elem(x, ys)
+    case y :: ys => eq.eq(x, y)
 }
 ```
 
@@ -92,3 +94,4 @@ class Eq a where
 ```
 
 Eq is the name of the type class
+
