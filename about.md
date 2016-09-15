@@ -4,10 +4,10 @@ title: About
 permalink: /about/
 ---
 
-I am a developer based in London, England. After about 7 years writing financial software, I now work for a startup where I do analytics and java things.
+My name is Hamish and I live and work in London, England.
 
-My academic background is in Theoretical Physics, mainly around the limits of Quantum Information Theory. My interests are mainly around physics, maths and functional programming.
+I work for a startup and am interested in functional programming, physics and maths. I also like to pick heavy things up and down in the gym.
 
-When I'm not coding, reading about code, reading physics or generally nerding out, you will normally find me at my local crossfit gym.
+I am not looking for work, so if you are a recruiter please leave me alone.
 
-You can find my github stuff [here](https://github.com/hamishdickson), my linkedIn stuff [here](https://uk.linkedin.com/in/hamishdickson) and my twitter stuff [here](https://twitter.com/_mishy)
+You can find my github stuff [here](https://github.com/hamishdickson) and you can get in touch via [twitter](https://twitter.com/_mishy) or I'm on the [scala gitter channel](https://gitter.im/scala/scala) almost all day long.
