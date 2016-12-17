@@ -10,6 +10,6 @@ libraryDependencies += "org.typelevel" %% "cats" % "0.7.0"
 
 tutSettings
 
-tutSourceDirectory := baseDirectory.value / "tut"
+tutSourceDirectory := baseDirectory.value / "src/main/tut"
 
 tutTargetDirectory := baseDirectory.value / "_posts"

@@ -112,6 +112,6 @@ Here, we get the same result but haven't needed a `null` to get around scope iss
 
 ### So no, you don't need nulls
 
-OK, so I've not _proved_ you can code without `null` here, but I have shown you ways around two of the most common uses of `null` in every day programming. In both cases `null` arose from the fact the code was somehow on the wrong level - a piece of logic should have been in a function or the result of a function should have been higher. I don't know of any genuine area of programming where `null` is required.
+OK, so I've not _proved_ you can code without `null` here, but I have shown you ways around two of the most common uses of `null` in every day programming. In both cases `null` arose from the fact the code was somehow on the wrong level of abstraction. I don't know of any genuine situation where you can't do this.
 
 As further proof, Haskell has no `null` value (it has `undefined`, but that is different) - Haskell simply doesn't need it.
