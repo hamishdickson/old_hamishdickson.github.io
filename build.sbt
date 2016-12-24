@@ -2,11 +2,14 @@ name := "hamishdickson.github.io"
 
 version := "1.0"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.1"
 
 tutSettings
 
-libraryDependencies += "org.typelevel" %% "cats" % "0.7.0"
+libraryDependencies ++= Seq(
+  "com.chuusai" %% "shapeless" % "2.3.2",
+  "org.typelevel" %% "cats" % "0.8.1"
+)
 
 tutSettings
 
