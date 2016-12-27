@@ -31,9 +31,11 @@ The obvious (and probably correct) solution is to create a new class and add the
 object Foo {
   import ImportantGlobalStuff.User
 
-  case class User2(firstName: String, lastName: String, image: String)
+  case class User2(imageLocation: String, firstName: String, lastName: String)
 
   case class Profile(user: User2, location: String, age: Int)
+
+  val p: Profile = Profile()
 }
 ```
 
@@ -45,19 +47,31 @@ And more importantly, is there something cooler we can use?
 
 ## Shapeless to the rescue
 
-```scala
-scala> case class Foo(s: String, i: Int)
-defined class Foo
+Lets stand back for a second and have a look at what we have.
 
-scala> case class Bar(b: Boolean, s: String, i: Int)
-defined class Bar
+We want to break apart Foo and give it another element ... so what's the type
 
-scala> val foo = Foo("this is a foo", 1)
-foo: Foo = Foo(this is a foo,1)
 
-scala> val fooRepr = Generic[Foo].to(foo)
-fooRepr: shapeless.::[String,shapeless.::[Int,shapeless.HNil]] = this is a foo :: 1 :: HNil
+```tut
+case class Foo(s: String, i: Int)
+```
+
+we have a thing that is made up of a `String` and an `Int` ... and we want
+
+```tut
+case class Foo2(b: Boolean, s: String, i: Int)
+```
+
+a thing with a `Boolean` and the same `String` and `Int` from `Foo`.
+
+The shape is very similar.
+
+```tut
+val foo = Foo("this is a foo", 1)
+```
+
+```tut
+val fooRepr = Generic[Foo].to(foo)
 
 val bar = Generic[Bar].from(false :: fooRepr)
-bar: Bar = Bar(false,this is a foo,1)
 ```
