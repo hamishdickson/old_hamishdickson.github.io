@@ -2,16 +2,15 @@ name := "hamishdickson.github.io"
 
 version := "1.0"
 
-scalaVersion := "2.12.1"
-
-tutSettings
+scalaVersion := "2.12.2"
 
 libraryDependencies ++= Seq(
   "com.chuusai" %% "shapeless" % "2.3.2",
   "org.typelevel" %% "cats" % "0.8.1"
 )
 
-tutSettings
+enablePlugins(TutPlugin)
+
 
 tutSourceDirectory := baseDirectory.value / "src/main/tut"
 

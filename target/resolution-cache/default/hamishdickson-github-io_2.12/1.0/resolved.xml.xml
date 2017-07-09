@@ -4,7 +4,7 @@
 		module="hamishdickson-github-io_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20170110200803"
+		publication="20170709165843"
 	>
 		<description>
 		hamishdickson.github.io
@@ -24,6 +24,7 @@
 		<conf name="docs" visibility="public" description=""/>
 		<conf name="pom" visibility="public" description=""/>
 		<conf name="scala-tool" visibility="private" description=""/>
+		<conf name="tut" visibility="private" description="" extends="compile"/>
 		<conf name="ensime-internal" visibility="private" description=""/>
 	</configurations>
 	<publications>
@@ -33,13 +34,13 @@
 		<artifact name="hamishdickson-github-io_2.12" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 	</publications>
 	<dependencies>
-		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.1" conf="scala-tool->default,optional(default)"/>
-		<dependency org="org.scala-lang" name="scala-library" rev="2.12.1" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.2" conf="scala-tool->default,optional(default)"/>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.12.2" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="org.tpolecat" name="tut-core_2.12" rev="0.5.2" conf="tut->default(compile)"/>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.10.6" transitive="false" conf="ensime-internal->default(compile)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.10.6" transitive="false" conf="ensime-internal->default(compile)"/>
 		<dependency org="org.scala-lang" name="scala-reflect" rev="2.10.6" transitive="false" conf="ensime-internal->default(compile)"/>
 		<dependency org="org.scala-lang" name="scalap" rev="2.10.6" transitive="false" conf="ensime-internal->default(compile)"/>
-		<dependency org="org.tpolecat" name="tut-core_2.12" rev="0.4.2" conf="test->default(compile)"/>
 		<dependency org="com.chuusai" name="shapeless_2.12" rev="2.3.2" conf="compile->default(compile)"/>
 		<dependency org="org.typelevel" name="cats_2.12" rev="0.8.1" conf="compile->default(compile)"/>
 	</dependencies>
