@@ -9,22 +9,22 @@
 		extra-sbtVersion="0.13"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, ensime-internal"
-		date="20170709165320"/>
+		date="20170712105148"/>
 	<dependencies>
 		<module organisation="org.tpolecat" name="tut-plugin">
-			<revision name="0.5.2" status="release" pubdate="20170517211652" resolver="sbt-plugin-releases" artresolver="sbt-plugin-releases" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="true" searched="true" default="false" conf="compile, default(compile)" position="7">
+			<revision name="0.5.2" status="release" pubdate="20170517211652" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="7">
 				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="successful" details="" size="1741" time="1386" location="/Users/hamishdickson/.ivy2/cache/scala_2.10/sbt_0.13/org.tpolecat/tut-plugin/ivy-0.5.2.xml" searched="true" original-local-location="/Users/hamishdickson/.ivy2/cache/scala_2.10/sbt_0.13/org.tpolecat/tut-plugin/ivy-0.5.2.xml.original" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.tpolecat/tut-plugin/scala_2.10/sbt_0.13/0.5.2/ivys/ivy.xml"/>
+				<metadata-artifact status="no" details="" size="1741" time="0" location="/Users/hamishdickson/.ivy2/cache/scala_2.10/sbt_0.13/org.tpolecat/tut-plugin/ivy-0.5.2.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.tpolecat/tut-plugin/scala_2.10/sbt_0.13/0.5.2/ivys/ivy.xml"/>
 				<caller organisation="default" name="hamishdickson-github-io-build" conf="compile, runtime" rev="0.5.2" rev-constraint-default="0.5.2" rev-constraint-dynamic="0.5.2" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
 				<artifacts>
-					<artifact name="tut-plugin" type="jar" ext="jar" status="successful" details="" size="63519" time="1828" location="/Users/hamishdickson/.ivy2/cache/scala_2.10/sbt_0.13/org.tpolecat/tut-plugin/jars/tut-plugin-0.5.2.jar">
+					<artifact name="tut-plugin" type="jar" ext="jar" status="no" details="" size="63519" time="0" location="/Users/hamishdickson/.ivy2/cache/scala_2.10/sbt_0.13/org.tpolecat/tut-plugin/jars/tut-plugin-0.5.2.jar">
 						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.tpolecat/tut-plugin/scala_2.10/sbt_0.13/0.5.2/jars/tut-plugin.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.scala-sbt" name="global-plugins">
-			<revision name="0.0" status="integration" pubdate="20170709165318" resolver="inter-project" artresolver="inter-project" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
+			<revision name="0.0" status="integration" pubdate="20170712105145" resolver="inter-project" artresolver="inter-project" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="default" name="hamishdickson-github-io-build" conf="compile, runtime" rev="0.0" rev-constraint-default="0.0" rev-constraint-dynamic="0.0" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
 				<artifacts>
