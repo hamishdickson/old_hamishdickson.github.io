@@ -124,5 +124,6 @@ implicit def cSemilattice[S](implicit s1Semi: Semilattice[S1], s2Semi: Semilatti
 }
 ```
 
+You can generate this with a bit of [shapeless](https://github.com/milessabin/shapeless) magic.
 
 Conceptually, you can think of this as a semilattice where each argument is treated as an orthogonal semilattice.
