@@ -2,7 +2,7 @@
 layout: post
 title:  "Semilattices for the win"
 date:   2017-07-12 08:00:00 +0100
-categories: traverse hlist
+categories: semilattices
 ---
 
 _I work at [Drivetribe](https://drivetribe.com/) and we have a pretty cool CQRS architecture. You can find out more about that [here](https://data-artisans.com/blog/drivetribe-cqrs-apache-flink). This post is a formal proof about something we use every day at work._
@@ -63,10 +63,10 @@ C(s1) ⊕' C(s2) = C(s1 ⊕ s2)    (**)
 
 ### Closure
 
-We get this pretty much for free from Scala's type system
+We get this pretty much for free from Scala's type system.
 
+### Associativity
 
-### Associativity:
 
 ```
 if ∀ x, y, z ∈ S, then
@@ -80,7 +80,7 @@ if ∀ x, y, z ∈ S, then
 ```
 
 
-### Commutativity:
+### Commutativity
 
 ```
 similarly, if ∀ x, y ∈ S, then
@@ -92,7 +92,7 @@ similarly, if ∀ x, y ∈ S, then
 ```
 
 
-### Idempotence:
+### Idempotence
 
 ```
 similarly, if ∀ x ∈ S, then
