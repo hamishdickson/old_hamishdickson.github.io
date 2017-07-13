@@ -5,15 +5,23 @@ date:   2017-07-12 08:00:00 +0100
 categories: traverse hlist
 ---
 
-_I work at [Drivetribe](https://drivetribe.com/) and we have a pretty cool CQRS architecture. You can find out more about that [here](https://data-artisans.com/blog/drivetribe-cqrs-apache-flink). This is a post about something we've had to tackle with our system._
+_I work at [Drivetribe](https://drivetribe.com/) and we have a pretty cool CQRS architecture. You can find out more about that [here](https://data-artisans.com/blog/drivetribe-cqrs-apache-flink). This post is a formal proof about something we use every day at work._
 
-# Why
+# A bit of background
 
-With distributed systems you tend to lose exactly-once guarentees about events. Depending on what you're doing, it also possible to get events out of order.
+A common problem with distributed event driven systems is the loss of exactly-once guarantees. However you can design your system to process events "at _most_ once" or "at _least_ once".
 
-This can be resolved using a semilattice, definition below.
+"at _most_ once" isn't very helpful for a lot of systems. There are applications where the loss of data doesn't matter, but in general you want all your events to be processed.
 
-The rest of this post is a short formal proof that if you have some case class which is composed of semilattices, then it's always valid to treat your whole case class as a semilattice. I'm planning to refer to this post in a future post.
+That leaves us with "at least once". ie you could get the same event more than once to process.
+
+To make things worse, depending on what you're doing it's also possible to get events out of order.
+
+Both of these can be resolved using an algebra called a semilattice, definition below.
+
+The rest of this post is a short formal proof that if you have some case class which is composed of semilattices, then it's always valid to treat your whole case class as a semilattice.
+
+I'm planning to write a more post in the future about why this becomes a logical choice for dealing with the issues above.
 
 
 # Proof that if (S, ⊕) forms a semilattice, then so does (case class C(s: S), ⊕')
