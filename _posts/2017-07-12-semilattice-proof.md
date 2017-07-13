@@ -116,7 +116,7 @@ case class CN(s1: S1, s2: S2, ... sN: SN)
 ```
 
 
-where `(S1, |+|1)`, `(S2, |+|2)`, ... `(SN, |+|N)` all form semilattices
+where `S1`, `S2`, ... `SN` all form semilattices with an associated combine operation
 
 ```scala
 implicit def cSemilattice[S](implicit s1Semi: Semilattice[S1], s2Semi: Semilattice[S2], .. sNSemi: Semilattice[SN]) = new Semilattice[C[S1, S2, .. SN]] {
