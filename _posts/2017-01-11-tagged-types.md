@@ -32,7 +32,7 @@ scala> implicit val intAddMonoid = new Monoid[Int] {
      |   def zero: Int = 0
      |   def combine(a: Int, b: Int): Int = a + b
      | }
-intAddMonoid: Monoid[Int] = $anon$1@7c46a9b5
+intAddMonoid: Monoid[Int] = $anon$1@43cc7712
 ```
 
 Monoids can be folded, so lets create a simple wrapper that lets us fold over a list of `T` which has a monoid:
@@ -56,7 +56,7 @@ scala> implicit val intMultMonoid = new Monoid[Int] {
      |   def zero: Int = 1
      |   def combine(a: Int, b: Int): Int = a * b
      | }
-intMultMonoid: Monoid[Int] = $anon$1@1de3ab7a
+intMultMonoid: Monoid[Int] = $anon$1@14d0917b
 ```
 
 and here we quickly run into a problem - how can we use both of these instances? Any reference to a `Monoid[Int]` is now ambiguous
@@ -106,23 +106,23 @@ scala> implicit val intSumMonoid = new Monoid[SumInt] {
      |   def zero: SumInt = ???
      |   def combine(a: SumInt, b: SumInt): SumInt = ???
      | }
-intSumMonoid: Monoid[SumInt] = $anon$1@4c581ce8
+intSumMonoid: Monoid[SumInt] = $anon$1@37fa1131
 
 scala> implicit val intMultMonoid = new Monoid[MultInt] {
      |   def zero: MultInt = ???
      |   def combine(a: MultInt, b: MultInt): MultInt = ???
      | }
-intMultMonoid: Monoid[MultInt] = $anon$1@1ebaf0ac
+intMultMonoid: Monoid[MultInt] = $anon$1@41e612ca
 ```
 
 Now we no longer have ambiguous instances
 
 ```scala
 scala> implicitly[Monoid[SumInt]]
-res2: Monoid[SumInt] = $anon$1@4c581ce8
+res2: Monoid[SumInt] = $anon$1@37fa1131
 
 scala> implicitly[Monoid[MultInt]]
-res3: Monoid[MultInt] = $anon$1@1ebaf0ac
+res3: Monoid[MultInt] = $anon$1@41e612ca
 ```
 
 Awesome!
@@ -141,13 +141,13 @@ scala> implicit val intSumMonoid = new Monoid[SumInt] {
      |   def zero: SumInt = tag[Sum][Int](0)
      |   def combine(a: SumInt, b: SumInt): SumInt = tag[Sum][Int](a + b)
      | }
-intSumMonoid: Monoid[SumInt] = $anon$1@3b56bf89
+intSumMonoid: Monoid[SumInt] = $anon$1@177af66a
 
 scala> implicit val intMultMonoid = new Monoid[MultInt] {
      |   def zero: MultInt = tag[Mult][Int](1)
      |   def combine(a: MultInt, b: MultInt): MultInt = tag[Mult][Int](a * b)
      | }
-intMultMonoid: Monoid[MultInt] = $anon$1@4e98c1a0
+intMultMonoid: Monoid[MultInt] = $anon$1@1b87969e
 ```
 
 Let's test the `foldMonoidList` function we defined earlier works with this:
