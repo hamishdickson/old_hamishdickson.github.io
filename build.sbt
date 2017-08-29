@@ -9,8 +9,11 @@ libraryDependencies ++= Seq(
   "org.typelevel" %% "cats" % "0.8.1"
 )
 
-enablePlugins(TutPlugin)
+scalacOptions ++= Seq(
+	"-language:higherKinds"
+)
 
+enablePlugins(TutPlugin)
 
 tutSourceDirectory := baseDirectory.value / "src/main/tut"
 

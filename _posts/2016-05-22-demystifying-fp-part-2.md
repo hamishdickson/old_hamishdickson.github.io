@@ -280,7 +280,6 @@ You can kind of see where this is going - we abstract out the collection:
 
 ```scala
 scala> def generalCollectionChanger[F[_],A,B](ls: F[A], f: A => B): F[B] = ???
-warning: there was one feature warning; for details, enable `:setting -feature' or `:replay -feature'
 generalCollectionChanger: [F[_], A, B](ls: F[A], f: A => B)F[B]
 ```
 
